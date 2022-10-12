@@ -1,0 +1,77 @@
+﻿@model IEnumerable<codefirst.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cust_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cust_age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.d_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cust_dob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cust_mob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cust_mail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cust_pswd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cust_confirmpswd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cust_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cust_age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.d_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cust_dob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cust_mob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cust_mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cust_pswd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cust_confirmpswd)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.cust_ID"><i class="fa-solid fa-pen-to-square"></i></a> 
+                    <a asp-action="Details" asp-route-id="@item.cust_ID"><i class="fa-sharp fa-solid fa-circle-info"></i></a> 
+                    <a asp-action="Delete" asp-route-id="@item.cust_ID"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,66 @@
+﻿@model codefirst.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cust_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cust_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cust_age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cust_age)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.d_order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.d_order)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cust_dob)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cust_dob)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cust_mob)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cust_mob)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cust_mail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cust_mail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cust_pswd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cust_pswd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cust_confirmpswd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cust_confirmpswd)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.cust_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
